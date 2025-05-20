@@ -1,0 +1,981 @@
+{
+  "__type__": "Deck",
+  "name": "Books::Refactoring improving design of Existing Code::Chapter 1",
+  "crowdanki_uuid": "7c75b1fd-db6b-455e-9554-a835530cb264",
+  "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+  "desc": "Deck covering Facebook Messenger System Design",
+  "dyn": 0,
+  "extendNew": 10,
+  "extendRev": 50,
+  "media_files": [],
+  "notes": [],
+  "children": [
+    {
+      "__type__": "Deck",
+      "name": "Code Smells and Structural Motivation",
+      "crowdanki_uuid": "37b55dca-4a2b-43fc-b5da-6add24d488c3",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is duplication (like copying statement to HTML) discouraged in long-lived code?",
+            "It increases maintenance burden and risk of inconsistent updates."
+          ],
+          "guid": "d1926e969261412794381ea56faa5556",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What motivates Extract Function refactoring when working with nested logic?",
+            "To name and isolate logic chunks for readability and testability."
+          ],
+          "guid": "4c4e14a80564485e87aa22aef21475ec",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the key sign you need to refactor before adding a feature?",
+            "If the code is hard to modify due to poor structure."
+          ],
+          "guid": "1c4ee93a3db741b485e0af5aa4ccbae0",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What are the risks of modifying poorly structured code?",
+            "Increased chance of bugs and difficulty understanding change impact."
+          ],
+          "guid": "f534f14a515f45898a5007e81c70d67e",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Extract Function and Decomposition",
+      "crowdanki_uuid": "86305fbf-5f59-4440-81f3-345de1573b82",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why use `Object.assign({}, aPerformance)` in the refactoring?",
+            "To create a copy of a performance object without mutating original input."
+          ],
+          "guid": "813033e582fe4c5aa7638c673926abf7",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What does `usd()` function do in the final code?",
+            "Formats a number into a USD currency string."
+          ],
+          "guid": "b567215f092948eab10c6cf97957777b",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the purpose of the `playFor()` function in the refactored example?",
+            "Looks up the play details for a given performance."
+          ],
+          "guid": "c328f505fe0d4a5686b8c3cd1530e11b",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What JavaScript refactoring extracts logic from a long function into smaller named pieces?",
+            "Extract Function."
+          ],
+          "guid": "6e3fa4872c3b423583fe922ac6334592",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What does Replace Temp with Query achieve?",
+            "Removes temporary variables to enable further refactoring and improve clarity."
+          ],
+          "guid": "15f1f810ab254a548a9e213f5c179db5",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the role of `amountFor()` in the refactoring example?",
+            "Calculates the charge for a single performance."
+          ],
+          "guid": "89989107b6614e75af7966033901edfd",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why was the variable `format` refactored into a function?",
+            "To remove temporary variables and improve modularity and reuse."
+          ],
+          "guid": "91f6b381fbad44969db7a793a29f756a",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is a “shadow variable” in the context of refactoring?",
+            "A duplicate variable in a new scope for return or accumulation."
+          ],
+          "guid": "21cf38c2be254fcc8ff38d51356b14c0",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why rename `thisAmount` to `result` inside `amountFor()`?",
+            "To clarify its purpose and align with coding conventions."
+          ],
+          "guid": "c4e8a0e6367442f19e6abdbec5b9d680",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "How are total volume credits calculated in the final refactor?",
+            "Using a `reduce` operation over the performance list."
+          ],
+          "guid": "c5c0f0c9bcb94f34ab3c8093fd2f23eb",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What refactoring is used to turn a temp variable into a function call?",
+            "Replace Temp with Query."
+          ],
+          "guid": "b58eae6edac5419b9da4191c17bdccec",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why might you repeat a loop in refactored code?",
+            "To simplify structure without significantly hurting performance."
+          ],
+          "guid": "265a8e63098546f580bb2532b28bbfdd",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What refactoring allows centralized money formatting logic?",
+            "Extracting and renaming to the `usd()` function."
+          ],
+          "guid": "f5e173b9452244c6a4ad715eeb753807",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why do we extract functions during early stages of refactoring?",
+            "To gain clarity and communicate understanding through code."
+          ],
+          "guid": "9f6946eff924485f9baec2a1895ecab5",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Split Phase and Intermediate Representation",
+      "crowdanki_uuid": "319debe8-9ab8-4006-96ef-2648507429d5",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "What approach does the final design follow for maintainability?",
+            "Separation of data, calculation, and presentation."
+          ],
+          "guid": "43c982649338452d899268178121e19e",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the purpose of the intermediate data structure in Split Phase?",
+            "To separate calculation logic from rendering logic."
+          ],
+          "guid": "d9f0b6f994ec4a9aa6b78f505245893a",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "How does `renderPlainText` function change in the split phase refactor?",
+            "It renders a report from a pre-calculated data structure instead of raw input."
+          ],
+          "guid": "3f76bdfa135a410888aa1b58f3b89380",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What are the two phases in the Split Phase pattern?",
+            "Calculating the data and rendering the output."
+          ],
+          "guid": "12106a32ec114e42948070b5d8553e28",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "How is `totalAmount()` computed in the refactored example?",
+            "By summing `amount` from each performance."
+          ],
+          "guid": "5d07b8d1300b4f5baacbc9bae377df84",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is statement rendering logic separated from data computation?",
+            "To isolate concerns and enable multiple output formats."
+          ],
+          "guid": "d7f2c976be2848d7a1af6c2ae4dce164",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why extract `renderHtml()` as a separate function?",
+            "To keep HTML output logic separate from plain text rendering."
+          ],
+          "guid": "30d8fc15639b4f9fb50971d23725927d",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why extract a play lookup like `playFor()` to a separate function?",
+            "To simplify and centralize repeated logic."
+          ],
+          "guid": "c4996b746f58490e9881d9b4edf7f686",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the benefit of creating a `createStatementData` function?",
+            "Centralizes and isolates business logic before rendering."
+          ],
+          "guid": "c973aa8b0aff487eba641af81cb94d16",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Polymorphism and Type Strategy",
+      "crowdanki_uuid": "a8259f6d-a777-4999-a18d-b1b1ca8211a9",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "How is polymorphism used to calculate volume credits?",
+            "Subclasses override a base class method to provide specific logic."
+          ],
+          "guid": "a0470fcfeede473d9c6106480b79b1c6",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What does Replace Conditional with Polymorphism solve?",
+            "Hard-to-maintain branching logic."
+          ],
+          "guid": "a6c7311c567b495b94e12be622ebdfa7",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What design pattern is used to avoid conditionals based on type?",
+            "Polymorphism via class hierarchy."
+          ],
+          "guid": "6b0bfb8a95134250a95962ed459d3af4",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "How does subclassing simplify future additions like new play types?",
+            "By localizing logic changes in new classes."
+          ],
+          "guid": "a539fe7237bb43a082c61fa71eb5ce48",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What function replaces the play type switch logic with subclasses?",
+            "createPerformanceCalculator."
+          ],
+          "guid": "af6df4112fdc4e3687a06262838c25f0",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is the conditional `play.type` check refactored into subclasses?",
+            "To improve scalability and clarity using polymorphism."
+          ],
+          "guid": "fe6b908acd36455eb237ab08d249ac6f",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What class method is overridden in TragedyCalculator to calculate amount?",
+            "`amount` getter method."
+          ],
+          "guid": "6e700a651ece47dcbead077f1131e379",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the role of the PerformanceCalculator class?",
+            "Encapsulates performance logic like amount and volume credits by play type."
+          ],
+          "guid": "d05d0001327544f1a2b8d06d07da1f68",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What’s the advantage of using getters in class design?",
+            "They allow data access to look like property access."
+          ],
+          "guid": "44d3f23f1b6e4753b10a44e612438b84",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is meant by 'subclass responsibility' in polymorphism?",
+            "It indicates the method must be implemented by a subclass."
+          ],
+          "guid": "7247307bc3ce4136ac2def462156efef",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What’s the benefit of centralizing behavior into calculator subclasses?",
+            "Keeps logic encapsulated and easier to update for each play type."
+          ],
+          "guid": "e7f74cb524544d5f98c466a64adb0698",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What refactoring is used to replace conditionals based on type with class methods?",
+            "Replace Conditional with Polymorphism."
+          ],
+          "guid": "e44edf28012d4bd5b12b76b65c32d107",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the benefit of keeping calculations in the calculator class?",
+            "Centralizes logic and simplifies downstream code."
+          ],
+          "guid": "82e1694d73aa48aa835d5947f782879b",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why use factory functions instead of direct constructors in JS refactor?",
+            "To return different subclasses based on input."
+          ],
+          "guid": "e6d0293cd6ed48a5ab52b488ad4f4a4e",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is one reason for using classes in JavaScript refactoring?",
+            "To organize behavior around data types for extensibility."
+          ],
+          "guid": "b8fb4a45a8b74734ba7e11022034280b",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Code Quality Philosophy",
+      "crowdanki_uuid": "b7c2764c-c6fa-43ea-b898-aeb3dc0fd104",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is mutability avoided in enriched performance data?",
+            "To prevent accidental data modification and keep functions pure."
+          ],
+          "guid": "8ca15bc1b4f544c995540debd1e55c53",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What naming convention is suggested for return values?",
+            "Always name the return value `result` for clarity."
+          ],
+          "guid": "d8de5fa652d04175b19271c46e06e524",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is structure preferred even if it results in more lines of code?",
+            "Structured code is easier to change and understand."
+          ],
+          "guid": "7556e1e51f3841e2804a1fb22ea3120e",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What principle does \"Always leave the code base healthier than when you found it\" support?",
+            "Continuous, incremental improvement."
+          ],
+          "guid": "277f4c25071e44ff99c32f42a2c1ecd1",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why are well-named functions critical in refactoring?",
+            "They convey intent without needing to read implementation."
+          ],
+          "guid": "174d7006bb144ba8b6d88fae2323994b",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is duplication in logic considered a maintenance hazard?",
+            "Changes must be duplicated and kept consistent, increasing risk."
+          ],
+          "guid": "5ce48c7cad9048c9a492fbda9b2c6be0",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is it better to have one source of logic than duplicate logic?",
+            "To avoid inconsistencies and reduce maintenance effort."
+          ],
+          "guid": "13c9e62342df41f3b2ebf2fe94688441",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the ultimate test of good code, according to the author?",
+            "How easy it is to change."
+          ],
+          "guid": "2387c4f5f44c4fd99d8d4e57153f64f0",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Refactoring Process and Tactics",
+      "crowdanki_uuid": "c30fb547-58d3-4357-8d9e-d99d2bb8bc6b",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is a key guideline when removing local variables before extraction?",
+            "Inline or refactor them to reduce scope complexity."
+          ],
+          "guid": "6152b521d83143f1ac9d8a90e886646e",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What does the camping rule mean in the context of refactoring?",
+            "Always improve code quality when making changes."
+          ],
+          "guid": "5f796258cc964e4dadc060178ace4665",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What problem does Replace Conditional with Polymorphism solve?",
+            "Hard-to-maintain branching logic."
+          ],
+          "guid": "bbc61d305d24469d899ec77b4570553e",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What’s the guiding rule behind small steps in refactoring?",
+            "Take tiny, safe steps that compile and pass tests."
+          ],
+          "guid": "99ce85f107994cafb66df62c65cff63b",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Refactoring Fundamentals",
+      "crowdanki_uuid": "1ca3e38c-fd13-4b99-8b87-c13b63d528ed",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is refactoring important when preparing to add new features?",
+            "To make the code easier to change without introducing bugs."
+          ],
+          "guid": "d32a55abf49243f2a950863c1b19fecd",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why move from single monolithic functions to composed functions?",
+            "To clarify behavior and simplify modifications."
+          ],
+          "guid": "696dae9594b64011afc7c31a1ffb4b08",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What does the Extract Function refactoring do in JavaScript?",
+            "It moves a code block into a named function to clarify intent and reuse logic."
+          ],
+          "guid": "dbed70006f1c47ea96dff23b67152842",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the purpose of refactoring in an example context?",
+            "To prepare code for changes and reduce complexity."
+          ],
+          "guid": "127833264414438598e9d94076614daf",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What makes copy-paste modifications risky in software?",
+            "They lead to duplicated logic that is hard to keep in sync."
+          ],
+          "guid": "0081a9d509024c8aa70066087e6061df",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Testing and Safety Net",
+      "crowdanki_uuid": "ff8f45e3-89a9-4283-a2cd-aa5590fd7293",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the first step before starting any refactoring?",
+            "Establishing a solid suite of self-checking tests."
+          ],
+          "guid": "19abb5f0e92d43ae9ff5380ccf1a3a2d",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is it essential to test after each refactoring step?",
+            "To catch mistakes early and localize any errors quickly."
+          ],
+          "guid": "d45b391603f1496fb9e742132c657efa",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What should be tested when refactoring calculation logic?",
+            "The accuracy of the intermediate data structure."
+          ],
+          "guid": "b71cdd715627466e972f28e1a1047c8d",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What refactoring step ensures you can revert safely after a failed change?",
+            "Commit your code after every working test run."
+          ],
+          "guid": "10c8cd598fc54dc3bf6d7b36df55ab27",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What is the key rhythm of effective refactoring?",
+            "Tiny changes followed by immediate tests and commits."
+          ],
+          "guid": "371bac9964794d5a9d1f0756af3a7253",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why are small steps essential in refactoring?",
+            "They limit the scope of bugs and speed up recovery from errors."
+          ],
+          "guid": "ec4df242f4514d25a9a8051cf4632c33",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Performance Considerations",
+      "crowdanki_uuid": "6bfb97d6-2e8b-4666-9707-68855662ddc6",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is performance tuning delayed until after refactoring?",
+            "Refactored code is easier to profile and optimize."
+          ],
+          "guid": "586eaf5a8a5046eb9016c8ac831fe0be",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What principle supports deferring performance optimization?",
+            "Refactor first, then tune performance only if necessary."
+          ],
+          "guid": "982f41d5c5b84236a44475a674d6c04a",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "How is performance calculation improved in the refactored code?",
+            "By deferring until refactoring is complete and profiling if needed."
+          ],
+          "guid": "53e1d9420588466985d96117187b5256",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "__type__": "Deck",
+      "name": "Object-Oriented Refactoring",
+      "crowdanki_uuid": "6f41a44e-0814-4650-a909-b4670c8ad047",
+      "deck_config_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "desc": "Covers core features like 1-1 chat, group chat, message sending and receiving",
+      "dyn": 0,
+      "extendNew": 10,
+      "extendRev": 50,
+      "media_files": [],
+      "children": [],
+      "notes": [
+        {
+          "__type__": "Note",
+          "fields": [
+            "What JavaScript feature allows `perf.amount` to act like data but run logic?",
+            "Getter functions in class design."
+          ],
+          "guid": "8219c4a6810b4bae99089a6f266dd249",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why is `amountFor()` moved inside the calculator class?",
+            "To encapsulate the amount logic for each play type."
+          ],
+          "guid": "923e792913f64930a9a3b361c3da794c",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "What’s the advantage of subclassing over conditionals in play type logic?",
+            "Encapsulates behavior per type and improves extensibility."
+          ],
+          "guid": "15a8c1b487da422185215db739651d59",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why might you use `super.volumeCredits` in ComedyCalculator?",
+            "To reuse base logic and add comedy-specific credits."
+          ],
+          "guid": "4a4b5aff51a643488e5d37169e658100",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        },
+        {
+          "__type__": "Note",
+          "fields": [
+            "Why do we use `new TragedyCalculator(...)` instead of a switch?",
+            "To delegate behavior using polymorphism."
+          ],
+          "guid": "ded2e4c2347643368ad5a24878079fc2",
+          "note_model_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "deck_configurations": [
+    {
+      "__type__": "DeckConfig",
+      "crowdanki_uuid": "c901a6ec-1234-48a5-9e56-ccfb0b0a1111",
+      "name": "Default",
+      "autoplay": true,
+      "dyn": false,
+      "lapse": {
+        "delays": [
+          10
+        ],
+        "leechAction": 0,
+        "leechFails": 8,
+        "minInt": 1,
+        "mult": 0.0
+      },
+      "maxTaken": 60,
+      "new": {
+        "bury": true,
+        "delays": [
+          1,
+          10
+        ],
+        "initialFactor": 2500,
+        "ints": [
+          1,
+          4,
+          7
+        ],
+        "order": 1,
+        "perDay": 20,
+        "separate": true
+      },
+      "replayq": true,
+      "rev": {
+        "bury": true,
+        "ease4": 1.3,
+        "fuzz": 0.05,
+        "ivlFct": 1.0,
+        "maxIvl": 36500,
+        "minSpace": 1,
+        "perDay": 100
+      },
+      "timer": 0
+    }
+  ],
+  "note_models": [
+    {
+      "__type__": "NoteModel",
+      "crowdanki_uuid": "b1b1b1b1-2345-4b4b-b4b4-b1b1b1b1b1b1",
+      "name": "Basic",
+      "css": ".card {\n font-family: arial;\n font-size: 20px;\n text-align: center;\n color: black;\n background-color: white;\n}",
+      "flds": [
+        {
+          "name": "Front",
+          "ord": 0,
+          "font": "Arial",
+          "size": 20,
+          "rtl": false,
+          "sticky": false,
+          "media": []
+        },
+        {
+          "name": "Back",
+          "ord": 1,
+          "font": "Arial",
+          "size": 20,
+          "rtl": false,
+          "sticky": false,
+          "media": []
+        }
+      ],
+      "req": [
+        [
+          0,
+          "all",
+          [
+            0
+          ]
+        ]
+      ],
+      "sortf": 0,
+      "tags": [],
+      "tmpls": [
+        {
+          "name": "Card 1",
+          "ord": 0,
+          "qfmt": "{{Front}}",
+          "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}"
+        }
+      ],
+      "type": 0,
+      "vers": [],
+      "latexPre": "\\documentclass[12pt]{article}\\special{papersize=3in,5in}\\usepackage[utf8]{inputenc}\\usepackage{amssymb,amsmath}\\pagestyle=empty}\\setlength{\\parindent}{0in}\\begin{document}",
+      "latexPost": "\\end{document}"
+    }
+  ]
+}

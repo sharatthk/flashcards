@@ -1,0 +1,74 @@
+Front|Back|Deck
+Why is duplication (like copying statement to HTML) discouraged in long-lived code?|It increases maintenance burden and risk of inconsistent updates.|Code Smells and Structural Motivation
+What motivates Extract Function refactoring when working with nested logic?|To name and isolate logic chunks for readability and testability.|Code Smells and Structural Motivation
+What is the key sign you need to refactor before adding a feature?|If the code is hard to modify due to poor structure.|Code Smells and Structural Motivation
+What are the risks of modifying poorly structured code?|Increased chance of bugs and difficulty understanding change impact.|Code Smells and Structural Motivation
+Why use `Object.assign({}, aPerformance)` in the refactoring?|To create a copy of a performance object without mutating original input.|Extract Function and Decomposition
+What does `usd()` function do in the final code?|Formats a number into a USD currency string.|Extract Function and Decomposition
+What is the purpose of the `playFor()` function in the refactored example?|Looks up the play details for a given performance.|Extract Function and Decomposition
+What JavaScript refactoring extracts logic from a long function into smaller named pieces?|Extract Function.|Extract Function and Decomposition
+What does Replace Temp with Query achieve?|Removes temporary variables to enable further refactoring and improve clarity.|Extract Function and Decomposition
+What is the role of `amountFor()` in the refactoring example?|Calculates the charge for a single performance.|Extract Function and Decomposition
+Why was the variable `format` refactored into a function?|To remove temporary variables and improve modularity and reuse.|Extract Function and Decomposition
+What is a “shadow variable” in the context of refactoring?|A duplicate variable in a new scope for return or accumulation.|Extract Function and Decomposition
+Why rename `thisAmount` to `result` inside `amountFor()`?|To clarify its purpose and align with coding conventions.|Extract Function and Decomposition
+How are total volume credits calculated in the final refactor?|Using a `reduce` operation over the performance list.|Extract Function and Decomposition
+What refactoring is used to turn a temp variable into a function call?|Replace Temp with Query.|Extract Function and Decomposition
+Why might you repeat a loop in refactored code?|To simplify structure without significantly hurting performance.|Extract Function and Decomposition
+What refactoring allows centralized money formatting logic?|Extracting and renaming to the `usd()` function.|Extract Function and Decomposition
+Why do we extract functions during early stages of refactoring?|To gain clarity and communicate understanding through code.|Extract Function and Decomposition
+What approach does the final design follow for maintainability?|Separation of data, calculation, and presentation.|Split Phase and Intermediate Representation
+What is the purpose of the intermediate data structure in Split Phase?|To separate calculation logic from rendering logic.|Split Phase and Intermediate Representation
+How does `renderPlainText` function change in the split phase refactor?|It renders a report from a pre-calculated data structure instead of raw input.|Split Phase and Intermediate Representation
+What are the two phases in the Split Phase pattern?|Calculating the data and rendering the output.|Split Phase and Intermediate Representation
+How is `totalAmount()` computed in the refactored example?|By summing `amount` from each performance.|Split Phase and Intermediate Representation
+Why is statement rendering logic separated from data computation?|To isolate concerns and enable multiple output formats.|Split Phase and Intermediate Representation
+Why extract `renderHtml()` as a separate function?|To keep HTML output logic separate from plain text rendering.|Split Phase and Intermediate Representation
+Why extract a play lookup like `playFor()` to a separate function?|To simplify and centralize repeated logic.|Split Phase and Intermediate Representation
+How is polymorphism used to calculate volume credits?|Subclasses override a base class method to provide specific logic.|Polymorphism and Type Strategy
+What does Replace Conditional with Polymorphism solve?|Hard-to-maintain branching logic.|Polymorphism and Type Strategy
+What design pattern is used to avoid conditionals based on type?|Polymorphism via class hierarchy.|Polymorphism and Type Strategy
+How does subclassing simplify future additions like new play types?|By localizing logic changes in new classes.|Polymorphism and Type Strategy
+What function replaces the play type switch logic with subclasses?|createPerformanceCalculator.|Polymorphism and Type Strategy
+Why is the conditional `play.type` check refactored into subclasses?|To improve scalability and clarity using polymorphism.|Polymorphism and Type Strategy
+What class method is overridden in TragedyCalculator to calculate amount?|`amount` getter method.|Polymorphism and Type Strategy
+What is the role of the PerformanceCalculator class?|Encapsulates performance logic like amount and volume credits by play type.|Polymorphism and Type Strategy
+What’s the advantage of using getters in class design?|They allow data access to look like property access.|Polymorphism and Type Strategy
+What is meant by 'subclass responsibility' in polymorphism?|It indicates the method must be implemented by a subclass.|Polymorphism and Type Strategy
+What’s the benefit of centralizing behavior into calculator subclasses?|Keeps logic encapsulated and easier to update for each play type.|Polymorphism and Type Strategy
+What refactoring is used to replace conditionals based on type with class methods?|Replace Conditional with Polymorphism.|Polymorphism and Type Strategy
+What is the benefit of keeping calculations in the calculator class?|Centralizes logic and simplifies downstream code.|Polymorphism and Type Strategy
+What is the benefit of creating a `createStatementData` function?|Centralizes and isolates business logic before rendering.|Split Phase and Intermediate Representation
+Why use factory functions instead of direct constructors in JS refactor?|To return different subclasses based on input.|Polymorphism and Type Strategy
+What is one reason for using classes in JavaScript refactoring?|To organize behavior around data types for extensibility.|Polymorphism and Type Strategy
+Why is mutability avoided in enriched performance data?|To prevent accidental data modification and keep functions pure.|Code Quality Philosophy
+What naming convention is suggested for return values?|Always name the return value `result` for clarity.|Code Quality Philosophy
+Why is structure preferred even if it results in more lines of code?|Structured code is easier to change and understand.|Code Quality Philosophy
+What principle does "Always leave the code base healthier than when you found it" support?|Continuous, incremental improvement.|Code Quality Philosophy
+Why are well-named functions critical in refactoring?|They convey intent without needing to read implementation.|Code Quality Philosophy
+Why is duplication in logic considered a maintenance hazard?|Changes must be duplicated and kept consistent, increasing risk.|Code Quality Philosophy
+Why is it better to have one source of logic than duplicate logic?|To avoid inconsistencies and reduce maintenance effort.|Code Quality Philosophy
+What is the ultimate test of good code, according to the author?|How easy it is to change.|Code Quality Philosophy
+What is a key guideline when removing local variables before extraction?|Inline or refactor them to reduce scope complexity.|Refactoring Process and Tactics
+What does the camping rule mean in the context of refactoring?|Always improve code quality when making changes.|Refactoring Process and Tactics
+What problem does Replace Conditional with Polymorphism solve?|Hard-to-maintain branching logic.|Refactoring Process and Tactics
+What’s the guiding rule behind small steps in refactoring?|Take tiny, safe steps that compile and pass tests.|Refactoring Process and Tactics
+Why is refactoring important when preparing to add new features?|To make the code easier to change without introducing bugs.|Refactoring Fundamentals
+Why move from single monolithic functions to composed functions?|To clarify behavior and simplify modifications.|Refactoring Fundamentals
+What does the Extract Function refactoring do in JavaScript?|It moves a code block into a named function to clarify intent and reuse logic.|Refactoring Fundamentals
+What is the purpose of refactoring in an example context?|To prepare code for changes and reduce complexity.|Refactoring Fundamentals
+What makes copy-paste modifications risky in software?|They lead to duplicated logic that is hard to keep in sync.|Refactoring Fundamentals
+What is the first step before starting any refactoring?|Establishing a solid suite of self-checking tests.|Testing and Safety Net
+Why is it essential to test after each refactoring step?|To catch mistakes early and localize any errors quickly.|Testing and Safety Net
+What should be tested when refactoring calculation logic?|The accuracy of the intermediate data structure.|Testing and Safety Net
+What refactoring step ensures you can revert safely after a failed change?|Commit your code after every working test run.|Testing and Safety Net
+What is the key rhythm of effective refactoring?|Tiny changes followed by immediate tests and commits.|Testing and Safety Net
+Why are small steps essential in refactoring?|They limit the scope of bugs and speed up recovery from errors.|Testing and Safety Net
+Why is performance tuning delayed until after refactoring?|Refactored code is easier to profile and optimize.|Performance Considerations
+What principle supports deferring performance optimization?|Refactor first, then tune performance only if necessary.|Performance Considerations
+How is performance calculation improved in the refactored code?|By deferring until refactoring is complete and profiling if needed.|Performance Considerations
+What JavaScript feature allows `perf.amount` to act like data but run logic?|Getter functions in class design.|Object-Oriented Refactoring
+Why is `amountFor()` moved inside the calculator class?|To encapsulate the amount logic for each play type.|Object-Oriented Refactoring
+What’s the advantage of subclassing over conditionals in play type logic?|Encapsulates behavior per type and improves extensibility.|Object-Oriented Refactoring
+Why might you use `super.volumeCredits` in ComedyCalculator?|To reuse base logic and add comedy-specific credits.|Object-Oriented Refactoring
+Why do we use `new TragedyCalculator(...)` instead of a switch?|To delegate behavior using polymorphism.|Object-Oriented Refactoring
